@@ -7,7 +7,7 @@
 
 :root {
   --bg-color: #f8f8fa;
-  --surface-color: #1d1d1d;
+  --surface-color: #ed3324;
   --on-surface-color: #ffffff;
   --primary-neutral-color: #595959;
   --font-monospaced: "Roboto Mono", monospace;
@@ -91,6 +91,10 @@ header address {
 }
 header address .logo {
   max-width: 225px;
+}
+
+header address .logo img {
+  width: 100%;
 }
 
 header address .content {
