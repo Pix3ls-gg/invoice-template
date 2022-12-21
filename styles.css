@@ -1,0 +1,387 @@
+/* -- Import Fonts -- */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+/* -- Define Variables -- */
+
+:root {
+  --bg-color: #f8f8fa;
+  --surface-color: #1d1d1d;
+  --on-surface-color: #ffffff;
+  --primary-neutral-color: #595959;
+  --font-monospaced: "Roboto Mono", monospace;
+}
+
+/* -- Resets -- */
+
+* {
+  border: 0;
+  box-sizing: content-box;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  vertical-align: top;
+}
+
+/* Content editable */
+
+*[contenteditable] {
+  border-radius: 0.25em;
+  min-width: 1em;
+  outline: 0;
+}
+
+*[contenteditable] {
+  cursor: pointer;
+}
+
+*[contenteditable]:hover,
+*[contenteditable]:focus,
+td:hover *[contenteditable],
+td:focus *[contenteditable],
+img.hover {
+  background-color: hsla(0, 0%, 60%, 0.3);
+}
+
+span[contenteditable] {
+  display: inline-block;
+}
+
+/* Layout Styles */
+
+header {
+  background-color: var(--bg-color);
+  display: flex;
+  padding: 30px 30px 50px 30px;
+}
+
+body {
+  min-height: 900px;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  margin-top: auto;
+}
+
+/* Utility Styles */
+
+.row {
+  display: flex;
+}
+
+/* Company Styles */
+
+header address {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header address .logo {
+  max-width: 225px;
+}
+
+header address .content {
+  margin-top: 125px;
+}
+
+header address .content :is(img) {
+  width: 100%;
+}
+
+/* Main */
+
+header main {
+  margin-left: 226px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header main h1 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+}
+
+header main .invoice {
+}
+
+header main .issue {
+}
+
+header main .client {
+}
+
+/* Common Styles */
+
+.content-block h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 12px;
+  color: var(--primary-neutral-color);
+}
+
+.content-block a {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 14px;
+  color: #000000;
+  margin-top: 6px;
+  display: block;
+}
+
+.content-block p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  color: #000000;
+  margin-top: 6px;
+}
+
+.content-block strong p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 14px;
+}
+
+.number:is(.inactive) {
+  color: grey;
+}
+
+td .number:not(.inactive) {
+  color: initial;
+}
+
+/* Table */
+
+table {
+  font-size: 75%;
+  table-layout: fixed;
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table thead {
+  background-color: var(--surface-color);
+  color: var(--on-surface-color);
+}
+
+table thead tr th {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 12px;
+  padding: 10px 0;
+}
+
+table thead tr th:is(:first-child),
+table tbody tr td:is(:first-child) {
+  padding-left: 30px;
+  width: 260px;
+  text-align: left;
+}
+
+table thead tr th:is(:last-child),
+table tbody tr td:is(:last-child) {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+table thead tr th:is(.number),
+table tbody tr td:is(.number) {
+  text-align: right;
+}
+
+table tbody tr td {
+  vertical-align: middle;
+}
+
+table tbody tr td :is(h3) {
+  margin-top: 36px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 14px;
+}
+
+table tbody tr td :is(p) {
+  margin: 10px 0 36px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  max-width: 240px;
+  padding-left: 2px;
+}
+
+table tbody tr :is(.number) {
+  font-family: var(--font-monospaced);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 13px;
+}
+
+table tbody tr {
+  border-bottom: 1px solid hsla(0, 0%, 80%, 0.5);
+}
+
+td {
+  border-color: #ddd;
+}
+
+th,
+td {
+  position: relative;
+}
+
+/* -- Footer Styles  -- */
+
+/* Common classes */
+
+footer .balance-block {
+  min-width: 100px;
+}
+
+footer .balance-block h3 {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--primary-neutral-color);
+  text-transform: uppercase;
+}
+
+footer .balance-block p {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  margin-top: 5px;
+}
+
+/* Specific styles */
+
+footer .balance {
+  margin-top: 80px;
+  width: 100%;
+}
+
+footer .balance :is(p) {
+  font-family: var(--font-monospaced);
+}
+
+footer .subtotals {
+  width: 60%;
+  background-color: var(--bg-color);
+}
+
+footer .balance .spacer {
+  font-weight: 300;
+  font-size: 34px;
+  margin: 0 70px 0 60px;
+}
+
+footer :is(.total, .subtotals) {
+  padding: 15px 30px;
+}
+
+footer .total {
+  justify-content: right;
+  background-color: var(--surface-color);
+  color: var(--on-surface-color);
+  text-align: right;
+  width: 40%;
+}
+
+footer .total h3 {
+  color: #d6d4d4;
+}
+
+footer .notes {
+  font-weight: 400;
+  font-size: 12px;
+  margin: 20px 30px;
+  line-height: 130%;
+}
+
+/* Print */
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+  }
+
+  body {
+    box-shadow: none !important;
+    min-height: 1100px;
+  }
+
+  span:empty {
+    display: none !important;
+  }
+
+  .add,
+  .cut {
+    display: none !important;
+  }
+}
+
+/* javascript */
+
+.add,
+.cut {
+  border-width: 1px;
+  display: block;
+  font-size: 0.8rem;
+  padding: 0.25em 0.5em;
+  float: left;
+  text-align: center;
+  width: 0.6em;
+}
+
+.add,
+.cut {
+  background: var(--primary-neutral-color);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 0.2em;
+  border-color: #0076a3;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  text-shadow: 0 -1px 2px rgba(0, 0, 0, 0.333);
+}
+
+.add {
+  margin: 8px 0 0;
+}
+
+.add:hover {
+  background: #00adee;
+}
+
+.cut {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: -2em;
+}
+
+.cut {
+  -webkit-transition: opacity 100ms ease-in;
+}
+
+tr:hover .cut {
+  opacity: 1;
+}

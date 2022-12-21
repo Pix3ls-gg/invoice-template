@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title id="headInvoiceNumber">Invoice</title>
+
+  <!-- Load Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Load Scripts -->
+  <script src="scripts.js" defer="true"></script>
+
+  <!-- Invoice ID Prefix -->
+  <script>
+    const prefix = 'mf';
+  </script>
+</head>
+
+<body>
+
+  <header>
+
+    <address>
+      <div class="content-block logo">
+        <img src="logo.png" />
+      </div>
+      <div class="content-block content">
+        <h3>COMPANY</h3>
+        <a href="mailto:Morfsl2021@gmail.com">company@gmail.com</a>
+        <p>
+          No 20, Company Road,<br />
+          State Madden
+        </p>
+      </div>
+    </address>
+
+    <main>
+      <h1>Invoice</h1>
+
+      <div class="content-block invoice">
+        <h3>INVOICE NUMBER</h3>
+        <strong>
+          <p id="invoiceNumber"></p>
+        </strong>
+      </div>
+      <div class="content-block issue">
+        <h3>Issue Date</h3>
+        <strong>
+          <p id="invoiceDate"></p>
+        </strong>
+      </div>
+      <div class="content-block client">
+        <h3>CLIENT</h3>
+        <strong>
+          <p contenteditable id="clientName">Acme Corporation</p>
+        </strong>
+        <p contenteditable id="clientProject">Web Development (AEC)</p>
+      </div>
+    </main>
+
+  </header>
+
+  <main>
+    <table id="priceTable" style="width:100%">
+      <thead>
+        <tr>
+          <th style="width:30%">Task Description</th>
+          <th style="width:15%" class="number">Hours</th>
+          <th style="width:25%" class="number">Rate Per Hour</th>
+          <th style="width:20%" class="number">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <h3 contenteditable>
+              1. Task Description
+            </h3>
+            <p contenteditable>
+              Prototyping homepage, contact page, about page and login screens low fidelity wireframes
+            </p>
+          </td>
+          <td contenteditable class="number inactive" id="rowHours">00</td>
+          <td contenteditable class="number inactive" id="rowRatePerHour">LKR 0000</td>
+          <td contenteditable class="number" id="rowTotal">LKR 0000</td>
+        </tr>
+      </tbody>
+    </table>
+    <a class="add">+</a>
+  </main>
+
+  <footer>
+    <div class="balance row">
+      <div class="subtotals row">
+        <div class="balance-block">
+          <h3>Subtotal</h3>
+          <p contenteditable id="subtotal">LKR 000</p>
+        </div>
+
+        <div class="spacer">+</div>
+
+        <div class="balance-block">
+          <h3>Taxes/Fees</h3>
+          <p contenteditable>LKR 000</p>
+        </div>
+      </div>
+
+      <div class="total row">
+        <div class="balance-block">
+          <div class="balance-block sum">
+            <h3>Taxes/Fees</h3>
+            <p contenteditable>LKR 000</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="notes" contenteditable>
+      Please transfer funds within 2 weeks of the invoice date to comply with our terms of service. Make the payment to
+      Hatton National Bank account number 062232424 bearer N.S Bandicoot.
+    </p>
+
+  </footer>
+
+  <!-- Load Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/short-unique-id@latest/dist/short-unique-id.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+
+</body>
+
+</html>
